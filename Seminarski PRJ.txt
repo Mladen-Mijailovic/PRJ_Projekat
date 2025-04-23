@@ -1,0 +1,46 @@
+Organizacija fudbalskog tima
+1. Unos informacija igraca(ime,prezime,godiste, pozicija igraca(LB,CM))
+2. Raspored meceva(ocenjivanje performansa[sto dovodi do forme(prosecna ocena)])
+3. Status igraca(prvotimac,rezervni...,forma, sprema(povredjen, bez kondicije))
+4. Brisanje igraca
+5. Strucni stab[trener](strategija, formacija[4-4-2,4-3-3...])
+
+
+---------------------------------------------
+Problemi
+1. Treba da pamti podatke
+2. Treba da dinamicki upisuje podatke
+3. Isto tako treba da brise podatke
+4. Pristup zasnovan na indeksnom pristupu
+
+
+---------------------------------------------
+Program Organizacija fudbalskog tima
+[Klase]
+~Igrac(ime, prezime, godiste, pozicija, status, {forma})
+~Raspored meceva (naziviKlubova, gostovanje/domacin, ocenaIgraca)
+~Trener(ime, prezime, strategija, formacija)
+[Glavni deo programa]
+1.Korisnik vidi menu sa izborom opcija
+2.Ponudjene opcije su: 1.Unesite igraca, 2.Raspored utakmica, 3.Trener, 4.Spisak igraca, 5.Brisanje igraca, 0.Izlaz
+[Funkicije]
+1.Unos igraca
+-Korisnik unosi podatke igraca
+-Treba da se dinamicki unose igraci[max broj igraca je 30]
+-Podaci se pamte kao niz u fajlu igraci.txt
+2.Raspored utakmica
+-Nude se dve opcije: 1.Unesite nov raspored i 2.Trenutni raspored
+-U slucaju da se izabere prva opcija, onda program brise stari raspored i upisuje novi sadrzaj u fajl raspored.txt. Korisnik treba da unese 20 utakmica od kojih su 2 gde odmara(tj ne igra te nedelje). Korisnik se pita za prvu utakmicu da unese naziv protivnika, a posle unosa naziva pita se da li ide u goste ili je domacin(unosi kao D ili G).
+-U slucaju da izabere drugu opciju, na ekranu ce se korisniku ispisati trenutni raspored utakmica koji se nalazi unutar fajla raspored.txt
+3.Trener
+-Nude se dve opcije: 1.Nov trener i 2.Trenutni trener
+-Izborom prve opcija korisnik treba da unese ime, prezime, strategiju, formaciju koju ce trener imati i koje se cuvaju u terner.txt.
+-Izborom druge opcije korisniku ce biti ispisane informacije o trenutnom treneru, koje se nalaze u fajlu trener.txt
+4.Spisak igraca
+-Kada se izabere spisak igraca, korisniku ce biti prikazani svi igraci i njihovi podaci
+5.Brisanje igraca
+-Nude se dve opcije: 1.Obrisi sve igrace i 2.Obrisi jednog igraca
+-Izborom prve opcije brisu se svi igraci iz fajla igraci.txt
+-Izborom druge opcije korisnik moze da izbrise jednog igraca iz fajla igraci.txt na osnovu njegovog indexa.
+0.Izlaz
+-Izborom ove opcije korisnik izlazi iz programa
